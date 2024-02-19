@@ -41,10 +41,23 @@ createApp({
     },
     methods: {
         nextSlide(){
+            //aumento indice slide
             this.activeSlide++
+
+            //controllo slide per loop infinito
+            if (this.activeSlide>=this.slides.length){
+                this.activeSlide = 0
+                console.log(this.slides.length)
+            }
         },
         prevSlide(){
+            //diminuisco slide
             this.activeSlide--
+
+            //controllo slide per loop infinito
+            if (this.activeSlide<0){
+                this.activeSlide = this.slides.length - 1
+            }
         }
 
     },
