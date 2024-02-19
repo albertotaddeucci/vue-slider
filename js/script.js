@@ -34,7 +34,10 @@ createApp({
             }
             ],
 
-            activeSlide: 0
+            activeSlide: 0,
+
+
+            autoplay: setInterval(this.nextSlide,3000)
             
 
         }
@@ -60,8 +63,10 @@ createApp({
         },
         chooseSlide(index){
             this.activeSlide = index
-        }
+        },
+        
 
     },
     
 }).mount('#app');
+
