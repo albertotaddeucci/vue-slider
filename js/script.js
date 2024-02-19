@@ -57,6 +57,9 @@ createApp({
             if (this.activeSlide<0){
                 this.activeSlide = this.slides.length - 1
             }
+        },
+        chooseSlide(index){
+            this.activeSlide = index
         }
 
     },
