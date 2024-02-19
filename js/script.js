@@ -47,7 +47,6 @@ createApp({
             //controllo slide per loop infinito
             if (this.activeSlide>=this.slides.length){
                 this.activeSlide = 0
-                console.log(this.slides.length)
             }
         },
         prevSlide(){
