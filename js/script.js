@@ -36,8 +36,8 @@ createApp({
 
             activeSlide: 0,
 
+            active: setInterval(this.nextSlide,3000),
 
-            autoplay: setInterval(this.nextSlide,3000)
             
 
         }
@@ -63,6 +63,17 @@ createApp({
         },
         chooseSlide(index){
             this.activeSlide = index
+        },
+        mouseover: function(){
+
+            //ferma funzione all'hover
+            clearInterval(this.active)
+        },    
+        mouseleave: function(){
+
+            //attiva funzione 
+            this.active = setInterval(this.nextSlide,3000)
+        
         },
         
 
